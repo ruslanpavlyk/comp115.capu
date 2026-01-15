@@ -109,7 +109,7 @@ print(f"The area of a circle with radius 2 is {area}.")
 print("\nExercise 5")
 days_of_the_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "Saturday"]
 day_today = int(input("input today's day number: "))
-days_trip = int(input("input today's day number: "))
+days_trip = int(input("input the trip duration: "))
 day_number = (day_today + days_trip) % (len(days_of_the_week) - 1)
 print(f"Your trip starts on {days_of_the_week[day_today]}, lasts {days_trip} days. You are back on {days_of_the_week[day_number]}.")
 
