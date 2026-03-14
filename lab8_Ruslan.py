@@ -53,6 +53,12 @@ Hint: 1. We put the seen chars in the set while adding them to the res string;
       2. To initialize an empty set: seen_set = set()
 """
 def remove_duplicates_set(s):
+    """
+    Removes duplicate characters from string s using a set
+    Example:
+    remove_duplicates_set("apple")
+    "aple"
+    """  
     res = ""
     seen = set()
     for _ in s:
@@ -82,6 +88,10 @@ gem_counting("awCcM", "cQqW") will return 1
 gem_counting("bFfL", "cQqW") will return 0
 """
 def gem_counting(stones, gems):
+    """
+    Counts how many stones are gems.
+    Each character in stones is checked against gems.
+    """
     gem_set = set(gems)
     count = 0
     for _ in stones:
@@ -118,6 +128,9 @@ Think about which data type we should use to ease the work of finding distinctiv
 
 """
 def students_id(ids):
+    """
+    Returns the number of different student IDs in the list.
+    """
     unique = set(ids)
     return len(unique)
     
@@ -145,6 +158,9 @@ returns {'002': 1, '003': 2, '001': 2, '012': 1}
 Hint: To initialize an empty dict: id_dict = {}
 """
 def students_id_occurrences(ids):
+    """
+    Counts occurrences of each student ID and returns a dictionary.
+    """
     id_dict = {}
     for _ in ids:
         if _ in id_dict:
@@ -176,6 +192,9 @@ re.findall(r'\b\w+\b', s) returns list of words from s that matches the pattern 
 """
 
 def word_frequency(paragraph):
+    """
+    Counts the frequency of words in a paragraph and returns a dictionary.
+    """
     import re
     words = re.findall(r'\b\w+\b', paragraph)
     freq = {}
